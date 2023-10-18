@@ -7,6 +7,9 @@ let persona = {
   apellidos: "Huxley",
 };
 
+persona.apellidos = "Rudolph";
+console.log(persona);
+
 /**
  * Escribe una instrucción para cambiar la propiedad 'apellidos' de la persona. Queremos cambiar sus apellidos a 'Rudolph'
  *
