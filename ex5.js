@@ -28,21 +28,31 @@ let pez3 = {
  */
 
 let banco_peces = [pez1, pez2, pez3];
+let pezBuscado = false;
 
 function buscarPez(banco_peces, pezBuscado) {
   let pezEncontrado = false;
   let indicePez = 0;
 
-  while (!pezEncontrado && indicePez <= banco_peces.length) {}
+  while (!pezEncontrado && indicePez < banco_peces.length) {
+
+    //Si al entrar al objeto y mirar la propiedad nombre, esta coincide con la entrada del usuario, entonces se cambia la variable pezEncontrado a true para salir del bucle, aumenta el indice y mira en el siguiente objeto, así hasta que acaba con el número de objetos en ek Array
+    if(banco_peces[indicePez].nombre === pezBuscado){
+      pezEncontrado = true;
+    };
+
+    indicePez++;
+
+  }
 
   return pezEncontrado;
 }
 
 // Esta llamada debería devolver 'true'
-// console.log(buscarPez(banco_peces, 'Nemo'));
+console.log(buscarPez(banco_peces, 'Nemo'));
 
 // Esta llamada debería devolver 'true'
-// console.log(buscarPez(banco_peces, 'Sipho'));
+console.log(buscarPez(banco_peces, 'Sipho'));
 
 // Esta llamada debería devolver 'false'
-// console.log(buscarPez(banco_peces, 'Tenacitas'));
+console.log(buscarPez(banco_peces, 'Tenacitas'));
